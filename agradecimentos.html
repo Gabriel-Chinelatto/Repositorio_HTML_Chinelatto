@@ -12,6 +12,34 @@
 </head>
 <body>
 
+<style>
+  body { font-family: "Segoe UI", sans-serif; }
+
+  :root {
+    --primaria: #0a8449;
+    --primaria-escura: #066537;
+    --primaria-clara: #a8dbc1;
+  }
+
+  h2 { font-weight: 700; color: var(--primaria-escura); }
+  p { font-weight: 400; }
+
+  .btn-primary {
+    background-color: var(--primaria);
+    border-color: var(--primaria);
+    font-weight: 600;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primaria-escura);
+    border-color: var(--primaria-escura);
+  }
+
+  .card {
+    border-left: 5px solid var(--primaria);
+  }
+</style>
+
 <section id="agradecimento-page" class="container py-4">
   <div class="card">
     <div class="card-body text-center">
