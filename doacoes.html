@@ -1,0 +1,79 @@
+<section id="doacoes-page" class="container py-4">
+  <h2 class="mb-3">Doações — Connect ONG</h2>
+
+  <p class="lead">Ajude ONGs parceiras escolhendo uma opção rápida abaixo. As doações aqui são simuladas para fins do projeto.</p>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Doação Única - R$ 20</h5>
+          <p class="card-text">Ajuda básica (alimentos/consumíveis).</p>
+          <button class="btn btn-primary btn-doar" data-amount="20" data-type="Única">Doar R$20</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Doação Mensal - R$ 50</h5>
+          <p class="card-text">Contribuição regular para manutenção.</p>
+          <button class="btn btn-primary btn-doar" data-amount="50" data-type="Mensal">Doar R$50 / mês</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Patrocínio - R$ 200</h5>
+          <p class="card-text">Apoio maior para projetos.</p>
+          <button class="btn btn-primary btn-doar" data-amount="200" data-type="Patrocínio">Patrocinar R$200</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3 class="mb-3">Estatísticas (simuladas)</h3>
+
+  <div id="estatisticas" class="row gy-3">
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h6>Total arrecadado</h6>
+        <p id="estat-total" class="fs-4 fw-bold">R$ 0</p>
+        <div class="progress" style="height: 12px;">
+          <div id="estat-progress" class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        <small class="text-muted">Meta simulada: R$ 2.000</small>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h6>Doações recebidas</h6>
+        <p id="estat-count" class="fs-4 fw-bold">0</p>
+        <small class="text-muted">Número total de doações simuladas</small>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h6>Doação média</h6>
+        <p id="estat-average" class="fs-4 fw-bold">R$ 0</p>
+        <small class="text-muted">Total dividido por doações</small>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <h4 class="mb-3">Doações recentes</h4>
+  <ul id="lista-doacoes" class="list-group"></ul>
+
+  <div class="mt-4">
+    <a href="#/contato" class="btn btn-outline-secondary">Precisa de ajuda? Contato</a>
+  </div>
+</section>
