@@ -1,0 +1,10 @@
+[
+  { "nome": "Alimentos Já", "cidade": "São Paulo", "area": "Alimentos", "tipo_doacao": "Produtos" },
+  { "nome": "TecnoDoa", "cidade": "Campinas", "area": "Eletrônicos", "tipo_doacao": "Equipamentos" },
+  { "nome": "Vestuário Solidário", "cidade": "Belo Horizonte", "area": "Roupas", "tipo_doacao": "Vestuário" },
+  { "nome": "Brinquedos & Sorrisos", "cidade": "Curitiba", "area": "Infantil", "tipo_doacao": "Brinquedos" },
+  { "nome": "Casa Limpa", "cidade": "Fortaleza", "area": "Higiene", "tipo_doacao": "Produtos de Higiene" },
+  { "nome": "Saúde em Rede", "cidade": "Recife", "area": "Saúde", "tipo_doacao": "Medicamentos" },
+  { "nome": "Móveis do Bem", "cidade": "Porto Alegre", "area": "Mobiliário", "tipo_doacao": "Móveis" },
+  { "nome": "Aliança Verde", "cidade": "Rio de Janeiro", "area": "Ambiental", "tipo_doacao": "Plantas/Insumos" }
+]
