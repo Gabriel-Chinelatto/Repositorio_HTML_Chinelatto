@@ -1,0 +1,85 @@
+/* =============================
+   PALETA PRINCIPAL DO PROJETO
+============================= */
+:root {
+  --cor-primaria: #0a8449;
+  --cor-primaria-escura: #066537;
+  --cor-suave: #e8f5ee;
+  --cor-texto: #222;
+  --cor-footer: #0a8449;
+}
+
+/* =============================
+   RESET E TIPOGRAFIA BASE
+============================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #fafafa;
+  color: var(--cor-texto);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+/* =============================
+   MENU
+============================= */
+header {
+  background: var(--cor-primaria);
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   SEÇÃO PRINCIPAL
+============================= */
+main {
+  min-height: 70vh;
+  padding-top: 20px;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  background: var(--cor-footer);
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* =============================
+   RESPONSIVIDADE
+============================= */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
