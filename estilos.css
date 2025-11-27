@@ -1,0 +1,68 @@
+/* ==========================
+   VARIÁVEIS DE COR
+========================== */
+:root {
+  --primaria: #0a8449;
+  --primaria-escura: #066537;
+  --primaria-clara: #a8dbc1;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ==========================
+   TIPOGRAFIA
+========================== */
+h2, h3, h4, h5 {
+  font-weight: 700;
+}
+h5 { font-weight: 600; }
+p, label, small {
+  font-weight: 400;
+}
+
+.card-title {
+  color: var(--primaria-escura);
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+.btn-primary, .btn-success {
+  background-color: var(--primaria) !important;
+  border-color: var(--primaria) !important;
+  font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  background-color: var(--primaria-escura) !important;
+  border-color: var(--primaria-escura) !important;
+}
+
+/* Outline cinza mantido pelo Bootstrap */
+
+/* ==========================
+   CAMPOS DE FORMULÁRIO
+========================== */
+textarea, input, select {
+  border: 2px solid var(--primaria-clara) !important;
+}
+
+/* ==========================
+   ELEMENTOS ESPECIAIS
+========================== */
+.card {
+  border-left: 5px solid var(--primaria);
+}
+
+.progress-bar {
+  background-color: var(--primaria);
+}
+
+.badge-doacao {
+  background-color: var(--primaria);
+  color: #fff;
+  font-weight: 600;
+}
