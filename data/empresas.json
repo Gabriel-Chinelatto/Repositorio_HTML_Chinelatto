@@ -1,0 +1,20 @@
+[
+    {
+      "nome": "TecnoSoluções Ltda.",
+      "area": "Tecnologia",
+      "cidade": "São Paulo",
+      "tipo_doacao": "Monetária, Voluntariado"
+    },
+    {
+      "nome": "Alimentos Saudáveis S.A.",
+      "area": "Alimentação",
+      "cidade": "Rio de Janeiro",
+      "tipo_doacao": "Doação de Alimentos"
+    },
+    {
+      "nome": "Consultoria e Gestão",
+      "area": "Serviços",
+      "cidade": "Belo Horizonte",
+      "tipo_doacao": "Consultoria Gratuita"
+    }
+]

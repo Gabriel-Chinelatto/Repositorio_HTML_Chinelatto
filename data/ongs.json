@@ -1,0 +1,41 @@
+[
+    {
+      "nome": "ONG Protetores da Natureza",
+      "email": "natureza@protetores.org",
+      "telefone": "(11) 98765-4321",
+      "site": "https://protetores.org",
+      "ano": 2005,
+      "estado": "SP",
+      "descricao": "Atuamos na proteção da fauna e flora do Pantanal.",
+      "servicos": ["Educacao", "Saude"],
+      "tipo": "OSC",
+      "cor": "#198754",
+      "prioridade": 9
+    },
+    {
+      "nome": "Crianças do Amanhã",
+      "email": "contato@criancas.org",
+      "telefone": "(21) 91234-5678",
+      "site": "https://criancasdoamanha.org",
+      "ano": 2018,
+      "estado": "RJ",
+      "descricao": "Oferecemos apoio educacional e nutricional para crianças carentes.",
+      "servicos": ["Alimentacao", "Educacao"],
+      "tipo": "Cooperativa",
+      "cor": "#0dcaf0",
+      "prioridade": 7
+    },
+    {
+      "nome": "Associação Amiga dos Pets",
+      "email": "pets@amigos.com",
+      "telefone": "(31) 55555-4444",
+      "site": "",
+      "ano": 2012,
+      "estado": "MG",
+      "descricao": "Resgate e reabilitação de animais abandonados.",
+      "servicos": ["Saude"],
+      "tipo": "OSC",
+      "cor": "#ffc107",
+      "prioridade": 8
+    }
+]
