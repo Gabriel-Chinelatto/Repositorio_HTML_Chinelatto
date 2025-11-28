@@ -1,204 +1,129 @@
-<!-- ============================ -->
-<!-- ESTILO MELHORADO (INSIRA NO HEAD OU ANTES DO FORM) -->
-<!-- ============================ -->
-<style>
-  body {
-    font-family: "Segoe UI", sans-serif;
-  }
-
-  h1 {
-    font-weight: 700;
-    color: #066537;
-  }
-
-  label {
-    font-weight: 600;
-  }
-
-  .card-form {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border-left: 6px solid #0a8449;
-    transition: 0.2s ease;
-  }
-
-  .card-form:hover {
-    transform: translateY(-3px);
-  }
-
-  .btn-primary {
-    background-color: #0a8449;
-    border-color: #0a8449;
-    font-weight: 600;
-  }
-
-  .btn-primary:hover {
-    background-color: #066537;
-    border-color: #066537;
-  }
-
-  .btn-secondary {
-    font-weight: 600;
-  }
-
-  .form-check-label {
-    font-weight: 500;
-  }
-
-  fieldset legend {
-    font-weight: 700;
-    color: #066537;
-  }
-
-  #prioridade-value {
-    font-weight: 600;
-    color: #066537;
-  }
-</style>
-
-<!-- ============================ -->
-<!-- FORMULÁRIO BONITO E PRONTO  -->
-<!-- ============================ -->
-
 <section class="container py-4">
-  
-  <h1 class="mb-4">Cadastro de ONG</h1>
+  <h1 class="mb-3">Cadastro de ONG</h1>
 
-  <div class="card-form">
+  <div id="cad-alert-placeholder"></div>
 
-    <div id="cad-alert-placeholder"></div>
-
-    <form id="cadastro-ong-form" novalidate enctype="multipart/form-data" class="needs-validation">
-      <div class="row g-3">
-
-        <!-- 1) Nome -->
-        <div class="col-md-6">
-          <label for="nome" class="form-label">Nome da ONG *</label>
-          <input type="text" class="form-control" id="nome" name="nome" required minlength="3">
-          <div class="invalid-feedback">Informe o nome da ONG (mínimo 3 caracteres).</div>
-        </div>
-
-        <!-- 2) Email -->
-        <div class="col-md-6">
-          <label for="email" class="form-label">Email *</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-          <div class="invalid-feedback">Informe um email válido.</div>
-        </div>
-
-        <!-- 3) Telefone -->
-        <div class="col-md-6">
-          <label for="telefone" class="form-label">Telefone *</label>
-          <input type="tel" pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
-          class="form-control" id="telefone" name="telefone" required
-          placeholder="(11) 99999-0000">
-          <div class="invalid-feedback">Informe um telefone válido.</div>
-        </div>
-
-        <!-- 4) Site -->
-        <div class="col-md-6">
-          <label for="site" class="form-label">Site (opcional)</label>
-          <input type="url" class="form-control" id="site" name="site" placeholder="https://">
-        </div>
-
-        <!-- 5) Ano -->
-        <div class="col-md-4">
-          <label for="ano" class="form-label">Ano de fundação *</label>
-          <input type="number" class="form-control" id="ano" name="ano"
-          required min="1900" max="2025" placeholder="Ex: 2010">
-        </div>
-
-        <!-- 6) Data -->
-        <div class="col-md-4">
-          <label for="data_registro" class="form-label">Data de registro</label>
-          <input type="date" class="form-control" id="data_registro" name="data_registro">
-        </div>
-
-        <!-- 7) Estado -->
-        <div class="col-md-4">
-          <label for="estado" class="form-label">Estado *</label>
-          <select id="estado" name="estado" class="form-select" required>
-            <option value="">Escolha...</option>
-            <option value="SP">São Paulo</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="BA">Bahia</option>
-          </select>
-        </div>
-
-        <!-- 8) Descrição -->
-        <div class="col-12">
-          <label for="descricao" class="form-label">Descrição *</label>
-          <textarea id="descricao" name="descricao" class="form-control" required minlength="10" rows="4"></textarea>
-        </div>
-
-        <!-- 9) Serviços -->
-        <fieldset class="col-12">
-          <legend>Serviços oferecidos *</legend>
-
-          <div class="form-check">
-            <input class="form-check-input servico-checkbox" type="checkbox" value="Alimentacao" id="s1" name="servicos">
-            <label class="form-check-label" for="s1">Alimentação</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input servico-checkbox" type="checkbox" value="Educacao" id="s2" name="servicos">
-            <label class="form-check-label" for="s2">Educação</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input servico-checkbox" type="checkbox" value="Saude" id="s3" name="servicos">
-            <label class="form-check-label" for="s3">Saúde</label>
-          </div>
-
-          <div class="invalid-feedback d-block" id="servicos-feedback" style="display:none">Marque ao menos um.</div>
-        </fieldset>
-
-        <!-- 10) Tipo -->
-        <div class="col-12">
-          <label class="form-label">Tipo *</label>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="OSC" required>
-            <label class="form-check-label" for="tipo1">OSC</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="Cooperativa" required>
-            <label class="form-check-label" for="tipo2">Cooperativa</label>
-          </div>
-
-          <div class="invalid-feedback d-block" id="tipo-feedback" style="display:none">Selecione o tipo.</div>
-        </div>
-
-        <!-- 11) Logo -->
-        <div class="col-md-6">
-          <label for="logo" class="form-label">Logo (PNG/JPG, até 2MB)</label>
-          <input class="form-control" type="file" id="logo" name="logo" accept="image/png, image/jpeg">
-        </div>
-
-        <!-- 12) Cor -->
-        <div class="col-md-3">
-          <label for="cor" class="form-label">Cor da marca</label>
-          <input type="color" id="cor" name="cor" class="form-control form-control-color">
-        </div>
-
-        <!-- 13) Prioridade -->
-        <div class="col-md-3">
-          <label for="prioridade" class="form-label">Prioridade (1-10)</label>
-          <input type="range" class="form-range" id="prioridade" name="prioridade" min="1" max="10" value="5">
-          <small id="prioridade-value" class="form-text">5</small>
-        </div>
-
-        <!-- Botões -->
-        <div class="col-12 d-flex gap-2 mt-3">
-          <button type="submit" class="btn btn-primary">Cadastrar ONG</button>
-          <button type="reset" id="btn-reset" class="btn btn-secondary">Limpar</button>
-        </div>
-
+  <form id="cadastro-ong-form" novalidate enctype="multipart/form-data" class="needs-validation">
+    <div class="row g-3">
+      <!-- 1) Nome (text) -->
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Nome da ONG *</label>
+        <input type="text" class="form-control" id="nome" name="nome" required minlength="3">
+        <div class="invalid-feedback">Informe o nome da ONG (mínimo 3 caracteres).</div>
       </div>
-    </form>
 
-  </div><!-- card -->
+      <!-- 2) Email -->
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="invalid-feedback">Informe um email válido.</div>
+      </div>
+
+      <!-- 3) Telefone (tel) -->
+      <div class="col-md-6">
+        <label for="telefone" class="form-label">Telefone *</label>
+        <input type="tel" pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" class="form-control" id="telefone" name="telefone" required placeholder="(11) 99999-0000">
+        <div class="invalid-feedback">Informe um telefone no formato (XX) 99999-0000.</div>
+      </div>
+
+      <!-- 4) Site (url) -->
+      <div class="col-md-6">
+        <label for="site" class="form-label">Site / Página (opcional)</label>
+        <input type="url" class="form-control" id="site" name="site" placeholder="https://">
+        <div class="invalid-feedback">Informe uma URL válida ou deixe vazio.</div>
+      </div>
+
+      <!-- 5) Ano de fundação (number) -->
+      <div class="col-md-4">
+        <label for="ano" class="form-label">Ano de fundação *</label>
+        <input type="number" class="form-control" id="ano" name="ano" required min="1900" max="2025" placeholder="Ex: 2010">
+        <div class="invalid-feedback">Informe um ano entre 1900 e 2025.</div>
+      </div>
+
+      <!-- 6) Data de registro (date) -->
+      <div class="col-md-4">
+        <label for="data_registro" class="form-label">Data de registro</label>
+        <input type="date" class="form-control" id="data_registro" name="data_registro">
+      </div>
+
+      <!-- 7) Estado (select) -->
+      <div class="col-md-4">
+        <label for="estado" class="form-label">Estado *</label>
+        <select id="estado" name="estado" class="form-select" required>
+          <option value="">Escolha...</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="BA">Bahia</option>
+          <!-- adicione conforme necessário -->
+        </select>
+        <div class="invalid-feedback">Selecione o estado.</div>
+      </div>
+
+      <!-- 8) Descrição (textarea) -->
+      <div class="col-12">
+        <label for="descricao" class="form-label">Descrição (missão e atuação) *</label>
+        <textarea id="descricao" name="descricao" class="form-control" required minlength="10" rows="4"></textarea>
+        <div class="invalid-feedback">Escreva uma descrição com pelo menos 10 caracteres.</div>
+      </div>
+
+      <!-- 9) Serviços (checkboxes múltiplos) -->
+      <fieldset class="col-12">
+        <legend class="col-form-label pt-0">Serviços oferecidos (marque ao menos 1) *</legend>
+        <div class="form-check">
+          <input class="form-check-input servico-checkbox" type="checkbox" value="Alimentacao" id="s1" name="servicos">
+          <label class="form-check-label" for="s1">Alimentação</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input servico-checkbox" type="checkbox" value="Educacao" id="s2" name="servicos">
+          <label class="form-check-label" for="s2">Educação</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input servico-checkbox" type="checkbox" value="Saude" id="s3" name="servicos">
+          <label class="form-check-label" for="s3">Saúde</label>
+        </div>
+        <div class="invalid-feedback d-block" id="servicos-feedback" style="display:none">Marque ao menos um serviço.</div>
+      </fieldset>
+
+      <!-- 10) Tipo (radio) -->
+      <div class="col-12">
+        <label class="form-label">Tipo *</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="OSC" required>
+          <label class="form-check-label" for="tipo1">OSC (Organização da Sociedade Civil)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="Cooperativa" required>
+          <label class="form-check-label" for="tipo2">Cooperativa</label>
+        </div>
+        <div class="invalid-feedback d-block" id="tipo-feedback" style="display:none">Selecione o tipo.</div>
+      </div>
+
+      <!-- 11) Logo (file) -->
+      <div class="col-md-6">
+        <label for="logo" class="form-label">Logo (PNG/JPG, <= 2MB)</label>
+        <input class="form-control" type="file" id="logo" name="logo" accept="image/png, image/jpeg">
+        <div class="invalid-feedback d-block" id="logo-feedback" style="display:none"></div>
+      </div>
+
+      <!-- 12) Cor da marca (color) -->
+      <div class="col-md-3">
+        <label for="cor" class="form-label">Cor da marca</label>
+        <input type="color" id="cor" name="cor" class="form-control form-control-color" value="#563d7c" title="Escolha a cor">
+      </div>
+
+      <!-- 13) Nível de urgência / prioridade (range) -->
+      <div class="col-md-3">
+        <label for="prioridade" class="form-label">Prioridade (1-10)</label>
+        <input type="range" class="form-range" id="prioridade" name="prioridade" min="1" max="10" value="5">
+        <small id="prioridade-value" class="form-text">5</small>
+      </div>
+
+      <!-- Botões -->
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Cadastrar ONG</button>
+        <button type="reset" id="btn-reset" class="btn btn-secondary">Limpar</button>
+      </div>
+    </div>
+  </form>
 </section>
