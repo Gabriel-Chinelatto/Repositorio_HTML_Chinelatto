@@ -83,3 +83,12 @@ footer a {
     font-size: 1.2rem;
   }
 }
+
+/* Pequenos ajustes visuais para formulários e cards */
+#ongs-list .card { transition: transform .15s ease-in-out; }
+#ongs-list .card:hover { transform: translateY(-4px); }
+
+.alert { margin-bottom: 1rem; }
+
+/* Forçar feedback de erro alinhado */
+.invalid-feedback.d-block { color: #dc3545; }

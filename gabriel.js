@@ -254,3 +254,4 @@
   // exporta globalmente
   window.initGabrielPage = initGabrielPage;
 })();
+
